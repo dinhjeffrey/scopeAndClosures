@@ -1,6 +1,6 @@
 # scopeAndClosures
 
-##Question 1: Scope
+##Preview: Scope
 Consider the following code:
 ```
 (function() {
@@ -11,12 +11,6 @@ console.log(b);
 ```
 What will be printed on the console?
 
-###Answer
-The code above prints ```5```.
-
-There are two assignments but the variable ```a``` is declared using the keyword ```var```. What this means is that ```a``` is a local variable of the function. On the contrary, ```b``` is assigned to the global scope.
-
-The other trick of this question is that it doesn’t use strict mode (```'use strict';```) inside the function. If strict mode was enabled, the code would raise the error Uncaught ReferenceError: b is not defined. Remember that strict mode requires you to explicitly reference to the global scope if this was the intended behavior. So, you should write:
 ```
 (function() {
    'use strict';
@@ -24,4 +18,56 @@ The other trick of this question is that it doesn’t use strict mode (```'use s
 })();
 
 console.log(b);
+```
+
+##Anatomy
+```
+var add = function(a,b) {
+	return a+b
+}
+add(3,4,5)
+```
+
+##Local Scope
+```
+var func = function() {
+	var local = true
+}
+console.log(local)
+```
+
+##Parent vs. Child Scope
+```
+function blender(fruit) {
+	var f = fruit
+	var y = 'yogurt'
+	function fs(){
+	var x = 'asdf'
+	console.log(f + ' and ' + y + ' makes ' + f + ' swirl' )
+	}
+	fs()
+}
+blender('blueberry')
+```
+##Precedence
+```
+var g = 'global'
+function go() {
+	var l = 'local'
+	var g = 'in here!'
+	alert (g + ' inside go')
+}
+go()
+alert(g + ' outside go')
+```
+
+##Block Scope
+```
+var inBlock = false
+for (var i=0; i<5; i++) {
+	var inBlock = true
+}
+if (inBlock) {
+	console.log('Is there block scope?' + !inBlock)
+}
 ```
