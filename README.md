@@ -1,4 +1,5 @@
-# scopeAndClosures
+# Scope
+The current context of execution. The context in which values and expressions are "visible," or can be referenced. If a variable or other expression is not "in the current scope," then it is unavailable for use. Scopes can also be layered in a hierarchy, so that child scopes have access to parent scopes, but not vice versa.
 
 ##Preview: Scope
 Consider the following code:
@@ -70,4 +71,27 @@ for (var i=0; i<5; i++) {
 if (inBlock) {
 	console.log('Is there block scope?' + !inBlock)
 }
+```
+
+```
+// scope exercises
+```
+
+#Closures
+Closures are functions that refer to independent (free) variables. In other words, the function defined in the closure 'remembers' the environment in which it was created.
+
+A function serves as a closure in JavaScript, and thus creates a scope, so that (for example) a variable defined exclusively within the function cannot be accessed from outside the function or within other functions.
+
+```
+var scope = "global scope"
+function checkScope() {
+	var scope = "local scope"
+	function innerFunc() {
+		return scope
+	}
+	return innerFunc
+}
+var test = checkScope()
+test
+test()
 ```
