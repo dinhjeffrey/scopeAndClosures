@@ -3,7 +3,7 @@ The current context of execution. The context in which values and expressions ar
 
 ##Preview: Scope
 Consider the following code:
-```
+```javascript
 (function() {
    var a = b = 5;
 })();
@@ -12,7 +12,7 @@ console.log(b);
 ```
 What will be printed on the console?
 
-```
+```javascript
 (function() {
    'use strict';
    var a = window.b = 5;
@@ -22,7 +22,7 @@ console.log(b);
 ```
 
 ##Anatomy
-```
+```javascript
 var add = function(a,b) {
 	return a+b
 }
@@ -30,7 +30,7 @@ add(3,4,5)
 ```
 
 ##Local Scope
-```
+```javascript
 var func = function() {
 	var local = true
 }
@@ -38,7 +38,7 @@ console.log(local)
 ```
 
 ##Parent vs. Child Scope
-```
+```javascript
 function blender(fruit) {
 	var f = fruit
 	var y = 'yogurt'
@@ -51,7 +51,7 @@ function blender(fruit) {
 blender('blueberry')
 ```
 ##Precedence
-```
+```javascript
 var g = 'global'
 function go() {
 	var l = 'local'
@@ -63,7 +63,7 @@ alert(g + ' outside go')
 ```
 
 ##Block Scope
-```
+```javascript
 var inBlock = false
 for (var i=0; i<5; i++) {
 	var inBlock = true
@@ -82,7 +82,7 @@ Closures are functions that refer to independent (free) variables. In other word
 
 A function serves as a closure in JavaScript, and thus creates a scope, so that (for example) a variable defined exclusively within the function cannot be accessed from outside the function or within other functions.
 
-```
+```javascript
 var scope = "global scope"
 function checkScope() {
 	var scope = "local scope"
