@@ -156,8 +156,12 @@
           // Here, we retain a reference to the newly created inner function for later, by assigning it to the global scope (window)
           // window.counterInOuterScope=0;
 
-          window.retainedInnerFn = new innerIncrementingFn();
-          console.log(retainedInnerFn);
+          window.retainedInnerFn = new innerIncrementingFn(); 
+          console.log(retainedInnerFn); 
+          /*** retainedInnerFn is an empty function when logged out. It isnt though on re.pl
+          functions create a new scope every time they are invoked/called. but it is still the same function (=== evaluates to true)
+          when we set a var to a new constructor invoked(), it invokes it the first time only. when var is called again, it doesnt invoke
+           */
 
         };
 
