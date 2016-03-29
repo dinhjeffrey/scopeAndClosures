@@ -5,11 +5,11 @@
 
 ###Let's get started...
 
-Explore the files in the **ExtraCredit** folder.
+Explore the files in this directory.
  
-Run the file in a browser. This document shows one passing test and a series of failing tests.
+Run **SpecRunner.html** in a browser. This document shows one passing test and a series of failing tests.
 
-The **functions.js** file holds all the failing tests that are displayed by launching **SpecRunner.html**. You will be editing **functions.js** and checking the output of **SpecRunner.html** to check your progress. This is just a javascript file so you can use console.log to help debug and inspect these functions.
+The **functions.js** file holds all the failing tests that are displayed by launching **SpecRunner.html**. You will be editing **functions.js** and refreshing **SpecRunner.html** to check your progress.
 
 A test block starts with an `it` function. The `it` function takes two arguments. The first is a string describing the rule addressed by the test. The second is a function that should throw an error if the assertion made using `expect` does not hold. For example, the assertion `expect(ACTUAL === 'inner').to.be.true;` throws an error if `ACTUAL === 'inner'` evaluates to `false`. You can almost read it like plain English.
 
