@@ -62,7 +62,7 @@ go()
 alert(g + ' outside go')
 ```
 
-##Block Scope
+##Block Scope vs. Functional Scope
 ```javascript
 var inBlock = false
 for (var i=0; i<5; i++) {
