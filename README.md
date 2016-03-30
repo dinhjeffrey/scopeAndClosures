@@ -4,21 +4,18 @@ The current context of execution. The context in which values and expressions ar
 ##Preview: Scope
 Consider the following code:
 ```javascript
-(function() {
-   var a = b = 5;
-})();
+var a = 1
+b = 2
+function example() {
+   var c = 5
+   d = 6
+}
 
-console.log(b);
-```
-What will be printed on the console?
-
-```javascript
-(function() {
-   'use strict';
-   var a = window.b = 5;
-})();
-
-console.log(b);
+console.log(a)
+console.log(b)
+console.log(c)
+console.log(d)
+// 'use strict'
 ```
 
 ##Anatomy
@@ -26,7 +23,7 @@ console.log(b);
 var add = function(a,b) {
 	return a+b
 }
-add(3,4,5)
+add(3,4)
 ```
 
 ##Local Scope
@@ -43,8 +40,8 @@ function blender(fruit) {
 	var f = fruit
 	var y = 'yogurt'
 	function fs(){
-	var x = 'asdf'
-	console.log(f + ' and ' + y + ' makes ' + f + ' swirl' )
+		var x = 'asdf'
+		console.log(f + ' and ' + y + ' makes ' + f + ' swirl' )
 	}
 	fs()
 }
