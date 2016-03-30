@@ -106,6 +106,7 @@ var makeStopwatch = function() {
 	var increase = function() { 
 		elapsed++ 
 	}
+	
 	setInterval(increase, 1000)
 
 	return stopwatch
