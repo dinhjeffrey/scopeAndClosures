@@ -15,7 +15,6 @@ console.log(a)
 console.log(b)
 console.log(c)
 console.log(d)
-// 'use strict'
 ```
 
 ##Anatomy
@@ -106,7 +105,7 @@ var makeStopwatch = function() {
 	var increase = function() { 
 		elapsed++ 
 	}
-	
+
 	setInterval(increase, 1000)
 
 	return stopwatch
