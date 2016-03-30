@@ -40,7 +40,6 @@ function blender(fruit) {
 	var f = fruit
 	var y = 'yogurt'
 	function fs(){
-		var x = 'asdf'
 		console.log(f + ' and ' + y + ' makes ' + f + ' swirl' )
 	}
 	fs()
