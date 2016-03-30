@@ -10,7 +10,7 @@ function example() {
    var c = 5
    d = 6
 }
-
+example()
 console.log(a)
 console.log(b)
 console.log(c)
